@@ -13,8 +13,8 @@ jobs:
       - run: ./node_modules/.bin/webpack
       - run: mkdir public
       - run: cp index.html public/
-      - run: cp example.sqlite3 public/
       - run: cp -r dist/ public/
+      - run: cp example.sqlite3 public/dist
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
